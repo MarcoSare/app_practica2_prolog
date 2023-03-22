@@ -1,0 +1,232 @@
+/*-- GOOGLE FONTS --*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;900&display=swap");
+/*-- VARIABLES CSS --*/
+:root {
+  --header-height: 3.5rem;
+  /* -- COLOR PALETTE -- */
+  --first-color: #407c87;
+  --second-color: #a5dbdd;
+  --first-color-alt: #eef1f6;
+  --second-color-alt: #15292c;
+  --body-color: white;
+  --text-color: #1b3439;
+
+  /* -- FONT TYPOGRAPHY*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* -- FONT wEIGHT --*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*-- MARGENES BOTTOM --*/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+input {
+  outline: none;
+}
+
+.mb-05 {
+  margin-bottom: var(--mb-0-5);
+}
+.mb-1 {
+  margin-bottom: var(--mb-1);
+}
+
+.mt-1 {
+  margin-top: var(--mb-1);
+}
+
+.ml-1 {
+  margin-left: var(--mb-1);
+}
+
+.mr-1 {
+  margin-right: var(--mb-1);
+}
+
+.mb-2 {
+  margin-bottom: var(--mb-2);
+}
+
+.container_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* new login */
+
+.section-login{
+width: 100vw;
+height: 100vh;
+display: flex;
+}
+
+.login-img{
+    background: url('../images/tec19-2-01-scaled.webp') center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 70%;
+}
+
+.login-data{
+    height: 100%;
+    width: 30%;
+    
+}
+
+.login-form{
+    margin: var(--mb-2);
+    background-color: white;
+    
+    flex-direction: column;
+    justify-content: start;
+    padding: var(--mb-1);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    border-radius: var(--mb-1);
+    text-align: center;
+}
+
+.login-logo-itc{
+    height: 100px;
+    width: 80px;
+    object-fit: cover;
+}
+
+.main {
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.section_main {
+  margin-top: 1rem;
+  width: 98vw;
+  height: 650px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.login_img_div {
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--first-color);
+}
+
+.login_img {
+  width: 500px;
+  height: 500px;
+  object-fit: fill;
+}
+
+.login_card {
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--first-color-alt);
+}
+
+.login_form_2 {
+  width: auto;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--mb-2);
+  text-align: center;
+}
+
+.login_icon {
+  height: 100px;
+  width: 100px;
+}
+
+.login_show_pass {
+  justify-content: start;
+}
+
+.div_input_text {
+  position: relative;
+}
+
+.div_input_text i {
+  position: absolute;
+  right: 25px;
+  top: 30%;
+  margin: auto 0;
+}
+
+.input_text {
+  height: 40px;
+  width: 80%;
+  border-radius: 10px;
+  padding-left: var(--mb-0-5);
+  padding-right: 3rem;
+  border-width: 1px;
+  border-color: var(--first-color) ;
+}
+
+.input_text:focus {
+    border-width: 2px;
+    border-color: var(--second-color-alt) ;
+  }
+
+.input_check_box {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.btn {
+  height: 40px;
+  min-width: 80%;
+  background-color: var(--second-color-alt);
+  color: #eef1f6;
+  border-radius: 20px;
+  cursor: pointer;
+}
