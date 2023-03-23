@@ -97,6 +97,94 @@ input {
   align-items: center;
 }
 
+/* HEADER */
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: transparent;
+}
+
+/* NAV BAR */
+
+/* NAVBAR */
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1rem;
+  position: relative;
+  background: transparent;
+}
+
+.nav_logo{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.nav_section{
+    display: flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  align-items: center;
+}
+
+
+.nav_list{
+    display: flex;
+    align-items: center;
+}
+
+.nav_list_li{
+    color: #fff;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.nav_section_bars{
+  display: none;
+}
+
+.icon_bars{
+  color: white;
+  font-size: var(--h2-font-size);
+}
+
+.nav_section_btn{
+  display: none;
+}
+
+.nav_section_list.open{
+  padding: var(--mb-1);
+  height: 200px;
+}
+
+.nav_section_list{
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+/* MAIN */
+
+.main {
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.section_main {
+  margin-top: 1rem;
+  width: 98vw;
+  height: 650px;
+  border-radius: 20px;
+  display: flex;
+}
 
 /* new login */
 
@@ -122,7 +210,6 @@ display: flex;
 .login-form{
     margin: var(--mb-2);
     background-color: white;
-    
     flex-direction: column;
     justify-content: start;
     padding: var(--mb-1);
@@ -136,55 +223,84 @@ display: flex;
     width: 80px;
     object-fit: cover;
 }
+/* DASHBOARD */
+.dash-board-section{
+  background: 
+  linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(0, 0, 0, 0.8352591036414566) 100%
+    ),
+  url('../images/tec19-2-01-scaled.webp') center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
 
-.main {
-  overflow-x: hidden;
-  align-items: center;
+.dash-board-form{
+  background-color: rgba(105, 105, 105, 0.567);
+  padding: var(--mb-1);
+  border-radius: var(--mb-2);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+
+.centrar{
+  display: flex;
+  align-content: center;
   justify-content: center;
-  display: flex;
 }
 
-.section_main {
-  margin-top: 1rem;
-  width: 98vw;
-  height: 650px;
-  border-radius: 20px;
-  display: flex;
+.centro{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.login_img_div {
-  width: 50%;
-  height: 100%;
-  border-radius: 20px;
-  background-color: var(--first-color);
+.divPrincipal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 20px;
+
+  border: 2px solid black;
+  border-radius: 10px;
+
+  background-color: lightgray;
 }
 
-.login_img {
-  width: 500px;
-  height: 500px;
-  object-fit: fill;
+.titulo{
+  font-size: 20px;
+  font-weight: bold;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.login_card {
-  width: 50%;
-  height: 100%;
-  border-radius: 20px;
-  background-color: var(--first-color-alt);
+.widthFormulario{
+  width: 200px;
 }
 
-.login_form_2 {
-  width: auto;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  padding: var(--mb-2);
-  text-align: center;
+.margin-bottom10{
+  margin-bottom: 10px;
 }
 
-.login_icon {
-  height: 100px;
-  width: 100px;
+.text-align-end{
+  text-align: end;
 }
+
+.btnRegistrar{
+  margin-top: 20px;
+
+  width: 150px;
+}
+
+/* */
+
 
 .login_show_pass {
   justify-content: start;
@@ -220,6 +336,11 @@ display: flex;
   height: 20px;
   width: 20px;
   cursor: pointer;
+}
+
+
+.select{
+color: #15292c;
 }
 
 .btn {
