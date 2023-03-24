@@ -5,4 +5,13 @@ const getUserByArea= async (idArea)=>{
    console.log(JSON.stringify(data))    
    return data
 }
-export default {getUserByArea};
+
+
+const getUserByType= async (type)=>{
+   const data = await fetch(baseUrl + 'user_by_type/' + type).then((response) => response.json()).catch(err => err);
+   console.log("Hols")    
+   return data
+}
+
+
+export default {getUserByArea, getUserByType};

@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import Login from './views/login';
 import { DashBoard } from './views/admin/DashBoard';
+import { DashBoardSupport } from './views/support/DashBoard';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DashBoard />
+    <DashBoardSupport />
   </React.StrictMode>
 );
 

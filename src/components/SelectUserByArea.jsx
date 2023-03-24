@@ -1,34 +1,45 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import "../assets/styles/styles.css";
-import userServices from '../services/userServices'
+import computerServices from "../services/computerService";
 
-
-
-export const SelectUserByArea = ({idArea, users, setUsers}) => {
-  const [listUsers, setListUsers] = useState(null);
-  useEffect(() => {
-    console.log(idArea)
-    if(idArea=!undefined)
-    getUserByArea()
-  }, []);
-
-  const getUserByArea = async ()=>{
-    const response = await userServices.getUserByArea(idArea);
-    let options = response.map( item => { 
-      return { value: item._id , label : (item.first_name + " " + item.last_name)}; 
-    });
-    setListUsers(options)
-    
-    
+export const SelectUserByArea = ({ listUsers, setListCompus,user, setUser, setCompu }) => {
+  let isEmpty = true;
+  console.log(user.length);
+  if (user.length > 0) {
+    isEmpty = false;
+    console.log(user);
   }
 
-  if(idArea!=null)
+  const getCompuByUser = async (idUser)=>{
+    const response = await computerServices.getCompByUser(idUser);
+    let options = response.map( item => { 
+      return { value: item._id , label : item.serail_number }; 
+    });
+    setListCompus(options)
+    setCompu([])
+  }
+
   return (
-    <Select options={listUsers} className="col-md-8 widthFormulario select" />
-  );
-  else
-  return (
-    <Select className="col-md-8 widthFormulario select" onChange={(choice) => setUsers(choice.value)} />
+    <Select
+      options={listUsers}
+      value={
+        isEmpty
+          ? { label: "Select", value: "Select" }
+          : { label: user[0].label, value: user[0].value }
+      }
+      className="col-md-8 widthFormulario select"
+      onChange={async (e) => {
+        setUser([
+          {
+            label: e.label,
+            value: e.value,
+            email: e.email
+          },
+        ]);
+        await getCompuByUser(e.value);
+      }}
+      required
+    />
   );
 };
