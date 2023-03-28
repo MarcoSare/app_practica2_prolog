@@ -317,7 +317,7 @@ display: flex;
   margin: auto 0;
 }
 
-.input_text {
+.input_text, .input_text_error {
   height: 40px;
   width: 80%;
   border-radius: 10px;
@@ -330,6 +330,11 @@ display: flex;
 .input_text:focus {
     border-width: 2px;
     border-color: var(--second-color-alt) ;
+  }
+
+  .input_text_error {
+    
+    border-color: red ;
   }
 
 .input_check_box {

@@ -5,6 +5,23 @@ import itcLogo from "../assets/images/logo-itc.png";
 import React, { useState, useEffect } from "react";
 function Login() {
   const [showPass, setShowPass] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isEmail, setIsEmail] = useState(true);
+
+  const changePass = (value) => {
+    setPassword(value);
+    if (
+      value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/) ||
+      value === ""
+    ) {
+      setIsEmail(true);
+      console.log("true");
+    } else {
+      setIsEmail(false);
+      console.log("false");
+    }
+  };
 
   return (
     <section className="section-login">
@@ -17,7 +34,12 @@ function Login() {
             your computer equipment control system
           </p>
           <div className="div_input_text mb-05">
-            <input className="input_text" type="text" placeholder="email" />
+            <input
+              className={isEmail ? "input_text" : "input_text_error"}
+              type="text"
+              placeholder="email"
+              onChange={(e) => changePass(e.target.value)}
+            />
             <i className="fa-solid fa-envelope"></i>
           </div>
           <div className="div_input_text mb-1">
