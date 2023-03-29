@@ -38,9 +38,9 @@ export const DashBoard = () =>{
         console.log(support)
         
         if(res.status===200){
-            alert("insertado")
+          window.location.reload();
         }else{
-          alert("Error")
+          alert("Ha ocurrido un error inesperado")
         }
     }
     catch(error){

@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3001/api/v1/'
+const baseUrl = 'https://api-prolog.onrender.com/api/v1/'
 
 
 
@@ -29,4 +29,20 @@ const getMaintBySupport= async (idSupp)=>{
     return data
  }
 
-export default {addMaint, getMaintBySupport};
+ const completedMaint = async (id, desc)=>{
+    const body={
+        "description": `${desc}`
+    }
+    const data =  await fetch(baseUrl + 'maintenance_complete/' + id, {
+        method: 'PUT',
+        body: JSON.stringify(body),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then((response) => response)
+    .catch(console);
+
+    return data;
+ }
+
+export default {addMaint, getMaintBySupport, completedMaint};

@@ -97,6 +97,13 @@ input {
   align-items: center;
 }
 
+.container_center_colum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* HEADER */
 
 .header {
@@ -348,7 +355,7 @@ display: flex;
 color: #15292c;
 }
 
-.btn {
+.btn, .btn-logout {
   height: 40px;
   min-width: 80%;
   background-color: var(--second-color-alt);
@@ -366,4 +373,46 @@ color: #15292c;
 .label_maint{
   font-weight: 600;
   color: white;
+}
+
+
+.tbl-c{
+  height: 500px;
+  width: 400px;
+}
+
+
+
+.div_tbl{
+
+  height: auto;
+  text-align: center;
+  color: #fff;
+  padding: 75px 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.lbl{
+  display: flex;
+  justify-content: space-between;
+}
+
+.qr-img{
+  width: 250px;
+  height: 250px;
+}
+.login-logo-itc{
+  height: 100px;
+  width: 80px;
+  object-fit: cover;
+}
+
+.btn-logout{
+  min-width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

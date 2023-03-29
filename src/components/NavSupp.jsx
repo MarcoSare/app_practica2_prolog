@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/styles/styles.css";
 import itcLogo from "../assets/images/logo-itc.png";
-export const NavBar = ()=>{
+export const NavSupp = ()=>{
     return (
 <header className="header">
       <nav className="nav">
@@ -12,11 +12,9 @@ export const NavBar = ()=>{
         </div>
         <div className="nav_section nav_section_list">
           <ul className="nav_list">
-            <a href="/admin/dashBoard" className="nav_list_li">Home</a>
-            <a href="/admin/users" className="nav_list_li">Users</a>
-            <a  href="/admin/compus" className="nav_list_li">Computers</a>
-            <a  href="/admin/depas" className="nav_list_li">Departamentos</a>
-            <a href="/admin/report" className="nav_list_li">Reporte</a>
+            <a href="/support/dashBoard" className="nav_list_li">Home</a>
+            <a href="/support/pendientes" className="nav_list_li">Pendientes</a>
+            <a href="/support/completados" className="nav_list_li">Completados</a>
           </ul>
 
           <div className="nav_section">
@@ -26,9 +24,10 @@ export const NavBar = ()=>{
             </div>
           </div>
 
+        
         </div>
         <div className="nav_section nav_btn">
-           <a href="/" className="btn-logout">Salir</a>
+          <a href="/" className="btn-logout">Salir </a>
         </div>
 
         <div className="nav_section nav_section_bars">
